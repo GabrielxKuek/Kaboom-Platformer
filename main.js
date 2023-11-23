@@ -1,4 +1,6 @@
 import kaboom from "./libs/kaboom.mjs";
+import { uiManager } from "./utils/uiManager.js";
+import { load } from "./utils/loader.js";
 
 kaboom({
     width: 1280,
@@ -6,9 +8,13 @@ kaboom({
     letterbox: true
 })
 
+load.fonts();
+load.sounds();
+load.assets();
+
 const scenes = {
     menu: () => {
-        add([text("test"), pos(500, 500), color(0,0,0)])
+        uiManager.displayMainMenu();
     },
 
     controls: () => {
