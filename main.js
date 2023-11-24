@@ -18,7 +18,7 @@ const scenes = {
     },
 
     controls: () => {
-
+        uiManager.displayControlsMenu();
     },
 
     // levels
