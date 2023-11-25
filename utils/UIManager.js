@@ -127,8 +127,8 @@ class UIManager {
         );
 
         onKeyPress("enter", () => {
-            play("confirm-ui", { speed: 1.5 })
-            go("1")
+            play("confirm-ui", { speed: 1.5 });
+            go(1);
         })
     }
 }
