@@ -117,6 +117,13 @@ class UIManager {
             vec2(center().x, center().y + 300)
         )
 
+        onKeyPress("enter", () => {
+            play("confirm-ui", {
+                speed: 1.5
+            })
+            go(1)
+        })
+
     } // end controls menu scene
 }
 
