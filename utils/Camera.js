@@ -6,7 +6,7 @@ export class Camera {
 
         // fixedX is defined, fixedY not defined, use onUpdate
         if (fixedX && !fixedY) {
-            ontimeupdate(() => {
+            onUpdate(() => {
                 camPos(fixedX, this.attachedObj.pos.y + offsetY)
             })
 
@@ -15,7 +15,7 @@ export class Camera {
 
         // fixedX not defined, fixedY defined, use onUpdate
         if (!fixedX && fixedY) {
-            ontimeupdate(() => {
+            onUpdate(() => {
                 camPos(this.attachedObj.pos.x + offsetX, fixedY)
             })
 
@@ -24,7 +24,7 @@ export class Camera {
 
         // if fixed are both defined
         if (fixedX && fixedY) {
-            ontimeupdate(() => {
+            onUpdate(() => {
                 camPos(fixedX, fixedY)
             })
 
