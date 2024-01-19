@@ -4,19 +4,21 @@ export class Player {
         this.currentLevelScene = currentLevelScene
         this.initialX = posX
         this.initialY = posY
-        this.makePlayer()
+        this.makePlayer(posX, posY)
         this.speed = speed
         this.jumpForce = jumpForce
         this.lives = nbLives
         this.previousHeight = this.gameObj.pos.y
     }
 
-    makePlayer() {
+    makePlayer(x, y) {
+        this.initialX = x
+        this.initialY = y
         this.gameObj = add([
             sprite("player", { anim: "idle" }),
-            area({ shape: new Rect(vec2(0, 3), 8, 8 )}),
+            area({ shape: new Rect(vec2(0, 3), 8, 8) }),
             anchor("center"),
-            pos(this.initialX, this.initialY),
+            pos(x, y),
             scale(4),
             body(),
             "player",
