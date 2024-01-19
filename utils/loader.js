@@ -84,6 +84,10 @@ export const load = {
 
     },
     sounds: () => {
+        // main menu && controls screen
         loadSound("confirm-ui", "./sounds/confirm-ui.wav")
+
+        // game stuff
+        loadSound("jump", "./sounds/jump.wav")
     }
 }
