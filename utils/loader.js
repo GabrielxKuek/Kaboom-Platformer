@@ -89,5 +89,7 @@ export const load = {
 
         // game stuff
         loadSound("jump", "./sounds/jump.wav")
+        loadSound("hit", "./sounds/hit.wav")
+
     }
 }

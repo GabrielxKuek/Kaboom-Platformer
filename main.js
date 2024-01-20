@@ -38,6 +38,7 @@ const scenes = {
         level1.drawMapLayout(level1Layout, level1Mappings)
 
         const player = new Player(level1Config.playerStartPosX, level1Config.playerStartPosY, level1Config.playerSpeed, level1Config.jumpForce, level1Config.nbLives, 1, false)
+        player.update()
 
         const camera = new Camera()
         camera.attach(player.gameObj, 0, -200, null, 200)
